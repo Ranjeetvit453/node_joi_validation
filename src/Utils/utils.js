@@ -26,7 +26,7 @@ module.exports = class Utils{
         const tokemError={message:"token is empty",status:401};
         
         next(tokemError);
-        //res.send(tokemError)
+        
     }
     }catch(err){
         next(err)
