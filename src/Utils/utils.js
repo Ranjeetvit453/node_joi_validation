@@ -3,7 +3,7 @@ const saltRounds = 10;
 const bcrypt = require('bcrypt');
 module.exports = class Utils{
     static async verifiyCode(data){
-       return "ranjeetkumar"+data
+       return "ranjeetkumar"
     }
     static async generate(data){
         try{
