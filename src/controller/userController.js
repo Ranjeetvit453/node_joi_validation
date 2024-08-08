@@ -5,8 +5,6 @@ const UserService = require("../service/userService")
 
 
 module.exports = class UserController{
-
-
     static async userUpdate(req,res,next){
         try{
            const userData = req.body;
@@ -21,7 +19,6 @@ module.exports = class UserController{
              let userData = req.user;
             // console.log(" userData",userData)
               const checkPassword = await Utils.checkPassword(req.body.password,userData.password);
-             // console.log(" checkPassword",checkPassword)
              if(checkPassword){
                 const token =await Utils.generate(userData);
                 console.log(" token",token)
