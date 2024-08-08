@@ -17,7 +17,7 @@ module.exports = class UserController{
     static async userLogin(req,res,next){
         try{
              let userData = req.user;
-            // console.log(" userData",userData)
+          
               const checkPassword = await Utils.checkPassword(req.body.password,userData.password);
              if(checkPassword){
                 const token =await Utils.generate(userData);
