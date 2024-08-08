@@ -2,7 +2,9 @@ var jwt = require('jsonwebtoken');
 const saltRounds = 10;
 const bcrypt = require('bcrypt');
 module.exports = class Utils{
-
+    static async verifiyCode(){
+       return "hello"
+    }
     static async generate(data){
         try{
            const token = await jwt.sign({data: data,}, 'RS256', { expiresIn: "60 days" });
