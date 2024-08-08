@@ -2,8 +2,8 @@ var jwt = require('jsonwebtoken');
 const saltRounds = 10;
 const bcrypt = require('bcrypt');
 module.exports = class Utils{
-    static async verifiyCode(){
-       return "ranjeetkumar"
+    static async verifiyCode(data){
+       return "ranjeetkumar"+data
     }
     static async generate(data){
         try{
